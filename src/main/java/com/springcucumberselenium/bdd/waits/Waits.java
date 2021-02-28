@@ -9,10 +9,10 @@ import static com.springcucumberselenium.bdd.commons.WebDriverComponent.getDrive
 public class Waits {
 
     public static void waitUntilElementVisible(String cssSelector){
-        new WebDriverWait(getDriver(), 60).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(cssSelector)));
+        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(cssSelector)));
     }
 
     public static void waitUntilElementClickable(String cssSelector){
-        new WebDriverWait(getDriver(), 60).until(ExpectedConditions.elementToBeClickable(By.cssSelector(cssSelector)));
+        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.elementToBeClickable(By.cssSelector(cssSelector)));
     }
 }
