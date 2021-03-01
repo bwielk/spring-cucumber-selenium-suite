@@ -1,4 +1,4 @@
-package com.springcucumberselenium.bdd.cucumber.steps;
+package com.springcucumberselenium.bdd.common;
 
 import com.springcucumberselenium.bdd.commons.WebDriverComponent;
 import io.cucumber.java.Before;
