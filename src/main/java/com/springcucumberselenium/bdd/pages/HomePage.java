@@ -4,18 +4,18 @@ import com.springcucumberselenium.bdd.browserActions.ClickableActions;
 import com.springcucumberselenium.bdd.browserActions.ElementCheckActions;
 import com.springcucumberselenium.bdd.browserActions.TextFieldActions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import static com.springcucumberselenium.bdd.commons.WebDriverComponent.getDriver;
 import static com.springcucumberselenium.bdd.selectors.HomePageLocators.*;
 
+//investigate this
+import org.springframework.context.annotation.Scope;
 import static io.cucumber.spring.CucumberTestContext.SCOPE_CUCUMBER_GLUE;
 
-
+//@Scope(SCOPE_CUCUMBER_GLUE)
 
 @Component
-@Scope(SCOPE_CUCUMBER_GLUE)
 public class HomePage {
 
     @Autowired
