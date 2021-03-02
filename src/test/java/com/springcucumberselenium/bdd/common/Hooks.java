@@ -5,6 +5,8 @@ import io.cucumber.java.Before;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 
+//extraGlue param in Spring test declarations points to commons where Hooks live therefore the class is loaded
+
 public class Hooks{
 
         private boolean runBegun=false;

@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.core.env.Environment;
 
 public class LoginSteps {
 
@@ -48,4 +49,23 @@ public class LoginSteps {
         userPortalPage.checkUserIsNotLoggedIn();
     }
 
+    @Given("a user has entered a valid username$")
+    public void userHasEnteredTheCorrectUsername(){
+        homePage.fillUsernameInput(System.getProperty("username"));
+    }
+
+    @And("the user has entered a valid password$")
+    public void userHasEnteredTheCorrectPassword(){
+        homePage.fillPasswordInput(System.getProperty("password"));
+    }
+
+    @Then("the user is logged in$")
+    public void userHasLoggedIn(){
+        userPortalPage.checkUserIsLoggedIn();
+    }
+
+    @And("the user sees the user panel$")
+    public void userSeesTheUserPanel(){
+        userPortalPage.checkUserPanelIsDisplayed();
+    }
 }
